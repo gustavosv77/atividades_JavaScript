@@ -1,12 +1,23 @@
 const prompt = require('prompt-sync')();
 	
+    let novoCalculo=""
+
+    function reiniciar(){							
+    console.log("\nDeseja calcular novamente?\n\n")
+    console.log("Digite 'S' para sim ou qualquer tecla para sair:\n\n")      
+        novoCalculo= (prompt())     
+        console.clear()
+            if(novoCalculo =="S" || novoCalculo =="s" || novoCalculo =="Sim" || novoCalculo =="sim"){
+            console.clear()
+            converter()     	    	      	
+            }else{
+            }
+        } 
 
 
-   let opcao
-   let Celsius
-   let Fahrenheit
-   let result 
-    
+    function converter(){
+
+    let opcao , Celsius , Fahrenheit , result 
    
       console.log("Convertor de Temperatura\n")
       console.log("\nEscolha a Conversão:\n")
@@ -32,7 +43,8 @@ const prompt = require('prompt-sync')();
         console.clear()
         console.log(`\nO resultado é:\t ${result} °C\n`)
     }
-    
-    
+    reiniciar()
+}
+    converter()
 
     
