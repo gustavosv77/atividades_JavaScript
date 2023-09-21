@@ -4,7 +4,6 @@ const prompt = require('prompt-sync')();
       let numero, sorteio, tentativas = 1, menuOpcao, valorMaximo, chances
       let novoJogo=""
 
-      
                  
       function menuJogo(){	//função de menu do jogo		
 
@@ -18,7 +17,6 @@ const prompt = require('prompt-sync')();
         console.clear()     
       } 	
     
-
             
       function jogar(){			//função que guarda o número que o usuário digita	
           if(menuOpcao==1){
@@ -44,18 +42,14 @@ const prompt = require('prompt-sync')();
           }
             else{
               inicio()
-            }
-                               
-          
+            }                                 
   }				
     
-  
-
-                 
-   function reiniciar(){							
-    console.log("\nDeseja jogar novamente?\n\n")
-    console.log("Digite 'S' para sim ou qualquer tecla para sair:\n\n")        	
-         novoJogo= prompt()
+              
+      function reiniciar(){							
+          console.log("\nDeseja jogar novamente?\n\n")
+          console.log("Digite 'S' para sim ou qualquer tecla para sair:\n\n")        	
+          novoJogo= prompt()
           console.clear()
           if(novoJogo =="S" || novoJogo =="s" || novoJogo =="Sim" || novoJogo =="sim"){
           console.clear()   
@@ -67,17 +61,13 @@ const prompt = require('prompt-sync')();
           }
       } 
     
-
-
                     
-   function sortear(){ 		//função para sortear aleatoriamente o número a ser adivinhado
+      function sortear(){ 		//função para sortear aleatoriamente o número a ser adivinhado
         if(menuOpcao==1) sorteio = Math.floor(Math.random() * 50 + 1)
         if(menuOpcao==2) sorteio = Math.floor(Math.random() * 70 + 1)
         if(menuOpcao==3) sorteio = Math.floor(Math.random() * 100 + 1)
    }		
   
-
-
           
       function regras(){  	//função que dita as regras do jogo
 
@@ -135,21 +125,14 @@ const prompt = require('prompt-sync')();
             console.log("Game Over!! O número sorteado era ",sorteio,"\n\n")				
             reiniciar()   	
            }
-            
-
           
         } 		
     
       
-    function inicio(){
+      function inicio(){
         menuJogo()
         sortear()
         jogar()
         regras()
     }
       inicio() 
-      
-      
-      
-    
-    
