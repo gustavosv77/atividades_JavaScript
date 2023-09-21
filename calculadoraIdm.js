@@ -1,9 +1,25 @@
 const prompt = require('prompt-sync')();
 	
-			let peso
-			let altura, result, arredonda		 
+            let novoCalculo=""
+
+            function reiniciar(){							
+            console.log("\nDeseja calcular novamente?\n\n")
+            console.log("Digite 'S' para sim ou qualquer tecla para sair:\n\n")      
+                novoCalculo= (prompt())     
+                console.clear()
+                    if(novoCalculo =="S" || novoCalculo =="s" || novoCalculo =="Sim" || novoCalculo =="sim"){
+                    console.clear()                 
+                    idm()     	    	      	
+                    }else{
+                    }
+                } 
+
+            
+            function idm(){
+	
+			let altura, result
+            let peso		 
       
-     
 			console.log("Informe o seu peso e altura para calcular o IDM!\n")
 			console.log("Digite o seu peso em Kg:\n")
 			console.log("\nResposta:")
@@ -16,9 +32,7 @@ const prompt = require('prompt-sync')();
 
 			result= peso / (altura*altura)
 			
-		
-			console.log(`\nSeu indice de Massa Corporal é de: ${result.toFixed(1)} \n`)
-
+			console.log(`\nSeu indice de Massa Corporal é de: ${result.toFixed(1)} `)
 		
 				if(result < 18.50){
 					console.log("\nVocê está abaixo do peso ideal!\n")
@@ -32,8 +46,11 @@ const prompt = require('prompt-sync')();
 				else if(result >=30 ){
 					console.log("\nVocê está no quadro de obesidade!\n")
 		}
-      
-		
+        reiniciar()
+    }
+
+    idm()
+    
      
        
         
