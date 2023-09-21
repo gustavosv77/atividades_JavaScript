@@ -1,6 +1,9 @@
 const prompt = require('prompt-sync')();
 
+let reiniciar = true
+let respostaReiniciar
 
+while(reiniciar == true){
 console.log("\nDescubra se foi aprovado inserindo suas notas\n")
     
 console.log("\nLembre que as notas vão de 0 a 10 \n")
@@ -27,6 +30,22 @@ console.clear()
             else if(media<6){
                 console.log('\nVocê foi reprovado!')
             }
-            
-       
+
+        console.log("\n\nPara calcular novamente digite 's' ou 'sim' ou qualquer letra para finalizar\n")
+        console.log("Resposta:\t")
+        respostaReiniciar=prompt()
+        console.clear()
+    
+        if (respostaReiniciar == "s" || respostaReiniciar == "S" || respostaReiniciar == "sim" || respostaReiniciar == "Sim" || respostaReiniciar == "SIM"){
+            reiniciar = true    
+        }
+        else{
+            reiniciar = false
+        }
+        }
+      
+        
+        
+      
+        
     
